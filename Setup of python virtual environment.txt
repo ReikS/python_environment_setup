@@ -1,0 +1,37 @@
+Setup of python virtual environment on Windows
+
+Windows (Once)
+1. https://www.python.org/downloads/release/python-3913/
+2. download "Windows installer (64-bit)" which is Recommended
+3. Install "python-3.9.13-amd64", see screenshot Install_Python_3.9.13_Add_to_PATH.png
+
+Windows PowerShell (Not Admin) (Once)
+4. cd C:\Users\PC.DESKTOP-4TP8IE5>
+5. check installation: python --version / Expected: Python 3.9.13
+6. python -m ensurepip
+
+Windows PowerShell (Admin) (Once)
+7. Set-ExecutionPolicy RemoteSigned -Scope CurrentUser / You might be prompted to confirm the change. Type Y and press Enter.
+8. exit Windows PowerShell (Admin)
+
+Windows PowerShell (Not Admin) (For every virtual environment)
+Setup of python virtual environment using Windows PowerShell (Not Admin)
+9. cd "C:\Users\PC.DESKTOP-4TP8IE5\python_environments"
+10. python -m venv Example_environment
+11. Example_environment\Scripts\activate
+12. cd .\Example_environment\Scripts\
+13. .\python -m pip install --upgrade pip
+14. Activate the new environment: .\activate
+15. Navigate to the GitHub directory of the python environment setup: 
+	cd "D:\E\Wissensbasis\Projekte\python_environment_setup"
+16. pip install -r requirements_2024-09-26.txt --upgrade
+17. pip install spyder
+18. test spyder : "spyder"
+19. You close the spyder IDE manually.
+20. exit
+
+Windows PowerShell (Not Admin) (Every time you want to work in the virtual environment you created above)
+21. cd "C:\Users\PC.DESKTOP-4TP8IE5\python_environments\Example_environment\Scripts" 
+22. .\activate
+23. spyder
+
